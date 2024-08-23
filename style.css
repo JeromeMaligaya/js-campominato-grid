@@ -1,0 +1,24 @@
+/*css-reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*generics*/
+body{
+    font-family: sans-serif;
+}
+
+
+/*layout*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*color*/
+
+/*bg*/
+
+/*utilities*/
