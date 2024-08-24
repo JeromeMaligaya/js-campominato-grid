@@ -6,6 +6,9 @@ const grid = document.getElementById('grid');
 const button = document.querySelector('header button');
 
 //2.raccolta dati (grid values)
+const rows = 10;
+const cols = 10;
+const totCells = rows * cols;
 
 // 3.lavorazione dati
 // evento al bottone
