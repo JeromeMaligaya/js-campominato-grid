@@ -11,7 +11,12 @@ body{
 }
 
 header{
-    height: 100px;
+    height: 75px;
+}
+
+main{
+    background-color: #64FDD3;
+    padding: 50px 0;
 }
 
 img{
@@ -40,6 +45,29 @@ header button, header select{
 header button{
     width: 150px;
 }
- header img{
+
+header img{
     width: 75px;
- }
+}
+
+/* main */
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid{
+    width: 650px;
+    height: 650px;
+    margin: 0 auto;
+}
+#grid .cell{
+    flex-basis: 10%;
+    height: 10%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
