@@ -10,6 +10,14 @@ body{
     font-family: sans-serif;
 }
 
+header{
+    height: 100px;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
 
 /*layout*/
 .container{
@@ -22,3 +30,16 @@ body{
 /*bg*/
 
 /*utilities*/
+
+/* header */
+
+header button, header select{
+    height: 35px;
+}
+
+header button{
+    width: 150px;
+}
+ header img{
+    width: 75px;
+ }
