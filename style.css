@@ -10,7 +10,7 @@ body{
     font-family: sans-serif;
 }
 
-header{
+header, footer{
     height: 75px;
 }
 
