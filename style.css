@@ -62,6 +62,7 @@ header img{
     height: 650px;
     margin: 0 auto;
 }
+
 #grid .cell{
     flex-basis: 10%;
     height: 10%;
@@ -70,4 +71,9 @@ header img{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+#grid .cell.clicked{
+    background-color: blue;
+    color: white;
 }
