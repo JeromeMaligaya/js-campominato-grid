@@ -4,11 +4,12 @@ console.log('JS OK')
 // funzione creazione cella con dom-API
 function createCell(numberCells){
     const cell = document.createElement('div');
-    cell.className('cell');
+    cell.className = 'cell';
     cell.append(numberCells);
 
     return cell;
 };
+console.log
 
 // 1.recupero l'elemento dal Dom (grid, button)
 const grid = document.getElementById('grid');
@@ -23,13 +24,21 @@ const totCells = rows * cols;
 // evento al bottone
 button.addEventListener('click',function(){
     // ciclo for
+    let cell = '';
+    for (let i = 1; i <= totCells; i++){
         // creo a monte funz createCell
         // invoco la funz createCell
-
         // numerare le celle [i]
-
-    // 4.generazione output
-    // stampo in pagina
-
+        cell = createCell(i);
+        
+        
+        // 4.generazione output
+        // stampo in pagina
+        grid.append(cell)
+        console.log(cell)
+    }
+    
+    
+   
     //evento alla cella x cambio colore e console log n cella
 })
