@@ -24,18 +24,6 @@ img{
     display: block;
 }
 
-/*layout*/
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/*color*/
-
-/*bg*/
-
-/*utilities*/
-
 /* header */
 
 header button, header select{
