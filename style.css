@@ -64,14 +64,26 @@ header img{
 }
 
 #grid .cell{
-    flex-basis: 10%;
-    height: 10%;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
+
+#grid .cell.easy{
+    flex-basis: 10%;
+    height: 10%;
+}
+#grid .cell.medium{
+    flex-basis: calc(100% / 9);
+    height: calc(100% / 9);
+}
+#grid .cell.hard{
+    flex-basis:calc(100% / 7);
+    height:calc(100% / 7);
+}
+ 
 
 #grid .cell.clicked{
     background-color: blue;

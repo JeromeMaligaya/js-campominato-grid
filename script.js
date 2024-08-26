@@ -2,9 +2,9 @@
 console.log('JS OK')
 
 // funzione creazione cella con dom-API
-function createCell(content){
+function createCell(content, level){
     const cell = document.createElement('div');
-    cell.className = 'cell';
+    cell.classList.add('cell', level)
     cell.append(content);
 
     return cell;
@@ -14,22 +14,51 @@ console.log
 // 1.recupero l'elemento dal Dom (grid, button)
 const grid = document.getElementById('grid');
 const button = document.querySelector('header button');
+const selectLevel = document.querySelector('select');
+const form = document.querySelector('form');
 
-//2.raccolta dati (grid values)
-const rows = 10;
-const cols = 10;
-const totCells = rows * cols;
+
 
 // 3.lavorazione dati
 // evento al bottone
-button.addEventListener('click',function(){
-    // ciclo for
+form.addEventListener('submit', function(e){  
+    e.preventDefault();
+
+    // svuoto la griglia e cambio il testo al bottone
+    grid.innerHTML = '';
+    button.innerText = 'Ricomincia';
+
+    //recupero il valore della selectLevel
+    const level = selectLevel.value;
+
+    //per ogni livello gli assegno il numero di row e col
+    let rows;
+    let cols;
     
+    switch(level){
+        case 'easy':
+            rows = 10;
+            cols = 10;
+        break
+        case 'medium':
+            rows = 9;
+            cols = 9;
+        break
+        case 'hard':
+            rows = 7;
+            cols = 7;
+        break
+    }
+
+    // calcolo il numero di celle
+    let totCells = rows * cols;
+
+    // ciclo for
     for (let i = 1; i <= totCells; i++){
         // creo a monte funz createCell
         // invoco la funz createCell
         // numerare le celle [i]
-        const cell = createCell(i);
+        const cell = createCell(i, level);
         
         //evento alla cella x cambio colore e console log n' cella
         cell.addEventListener('click', function(){

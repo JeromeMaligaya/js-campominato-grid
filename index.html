@@ -22,22 +22,19 @@
                 <h1 class="m-0 fw-bolder fs-2">Campo Minato</h1>
             </div>
 
-            <div class="d-flex align-items-center gap-2">
-                <span class="d-none">Difficoltà:</span>
-                <select class="form-select d-none" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+            <form class="d-flex align-items-center gap-2">
+                <span>Difficoltà:</span>
+                <select class="form-select" aria-label="Default select example">
                     <option value="hard">Hard</option>
                     <option value="medium">Medium</option>
-                    <option value="easy">Easy</option>
+                    <option value="easy" selected>Easy</option>
                   </select>
-                <button type="button" class="btn btn-secondary">Play</button>
-             </div>  
+                <button type="submit" class="btn btn-secondary">Play</button>
+             </form>  
         </header>
         
         <main>
-            <div id="grid">
-               
-            </div>
+            <div id="grid"></div>
         </main>
 
         <footer  class="d-flex align-items-center ms-3">
